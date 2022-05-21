@@ -1,21 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="UTF-8">
         <title>The Vanguardian online Newspaper</title>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
         <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" 
         data-auto-replace-svg></script>
-        <link rel="stylesheet" href="style_VanGuardian.css"> 
-       </head>
+
+        <!-- <link rel="stylesheet" href="style_VanGuardian.css">  -->
+        <!-- COMMENT FROM JUSTIN: In order to only have one file, I used an internal stylesheet first and we can just copy this out after -->
+        <style>
+            body {
+                width: 100%;
+                margin: 10 auto;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: white; 
+                padding: 15px 90px;
+            }
+            nav li {
+                display: inline;
+            }
+            aside.editors_picks img {
+                height: 100px;
+                width: auto;
+            }
+
+        </style>
+
+    </head>
        
     <body>
         <header>
-            <!-- DON'T KNOW YET HOW TO INSERT THIS -->
+           <i class="fas fa-bars" style="font-size:20px"></i>
+           <!-- Justin: I don't know why this magnifying glass does not work, did not figure it out-->
+           <i class="fas fa-solid fa-magnifying-glass-dollar" style="font-size:20px"></i>     
+           <i class="fas fa-cat" style="font-size:20px"></i>     
 
-            <nav 1>
+                 
+           
+           <nav 1> 
                 <hr>
-                <h1>Navigation Menu 1</h1>
+                <!-- <h1>Navigation Menu 1</h1> -->
                 <ul>                    
                     <li><a href="myURL">U.S.</a></li>
                     <li><a href="myURL">INTERNATIONAL</a></li>
@@ -27,16 +53,25 @@
                 </ul>
             </nav 1>
             
-            <div>
-                <h4 class="date">Monday, June 7, 2021</h4>
-                <h5 class="paper">Today's Paper</h5>
-                <h1 class="main_title">The VanGuardian</h1>
-                
-            </div>
+            <!-- Blue Header -->
+            <section id="header">
+                <h1>The Vanguardian</h1>
+
+                <div id="float_left">
+                    <h4 class="date">Monday, June 7, 2021</h4>
+                    <h5 class="paper">Today's Paper</h5>
+                </div>
+                <div id="float_right">
+                    <i class="fa-solid fa-cloud-sun"></i>                    
+                    <h4 id="weather">22ºC</h3>
+                    <h5 id="nasdaq">Nasdaq: +1.31%</h5>
+                    <!-- [icon] -->
+                </div>
+            </section>
 
             <nav 3>
                 <hr>
-                <h1>Navigation Menu 3</h1>
+                <!-- <h1>Navigation Menu 3</h1> -->
                 <ul>
                     <li><a href="myURL">World Politics</a></li>
                     <li><a href="myURL">Business</a></li>
@@ -53,84 +88,156 @@
             </nav 3>
             <!--end of menu-->
         </header>
-        <!--Aside Section-->
-        <aside class = "opinion">
-            <h4>Opinion</h4>
+
+<!-- Start of Article -->
+<article>
+
+    <!-- left section of article -->
+    <section id="article_left">
+
+        <section class = "section0" id = "developing">
+            <h3>DEVELOPING</h3>
             <div>
-                <!--IMAGE-->
+                <h4>U.S. Employers Added 559,000 Jobs in May</h4>
+                <ul class = "body-list">
+                    <li>Hiring accelerated, with the government reporting that employers added about twice the previous month's gains. The unemployment rate fell to 5.8 percent.</li>
+                    <li>As coronavirus infections ebb, vaccinations spread and businesses reopen, the economy has started to regain its footing. Here's the latest in business.</li>
+                </ul>
+            </div>
+        </section>
+        <hr>
+        <section class = "section1" id = "live">
+            <h3>LIVE</h3>
+            <div>
+                <h4>Third Covid Wave Feared in Africa as Vaccinations Falter</h4>
+                <p>Immunization drives on the continent have been crippled by a lack of funding and doses. Here's the latest on the pandemic.</p>
+            </div>
+        </section>
+        <hr>
+        <section class = "section2" id = "extra">
+            <div>
+                <h3>U.S. Finds No Evidence of Alien Spacecraft but Can't Rule It Out</h3>
+                <p>A new report concedes that much about the aerial phenomena observed by Navy pilots in recent years remains difficult to explain.</p>
+            </div>
+        </section>
+
+    </section>
+
+    <!-- right section of the article -->
+    <section id="article_right">
+
+        <section class="section3">
+            <h5>Cumulative change in jobs since before the pandemic</h5>
+            <img src="img/Cumulative_change_in_jobs.png">
+            <img src="img/Patricia_cohen.jpg">
+            Patricia Cohen 35m ago
+            <p>Most economists don’t expect job creation to go into overdrive until the fall when schools reopen, enhanced unemployment benefits and more people are fully vaccinated.</p>
+            <img src="img/4dots.png">
+        </section>
+        <hr>
+        <section class="section4">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/MNY0YP1v3y8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h4>‘New Delhi Residents Savor Normalcy as Restaurants Reopen’</h4>
+            <p>We spent a week with New Delhi residents as they began to emerge from fear and isolation — and often after tremendous loss.</p>
+        </section>
+        <hr>
+        <section class="section5">
+            <img src="img/US Navy_no_evidence_Alien.jpg">
+        </section>
+
+
+        <hr>
+
+    </section>
+
+
+
+</article>
+<!-- End of Article -->
+
+<!--Aside Section-->
+        <aside class = "opinion">
+            <h3>Opinion</h3>
+            <div>
+                <img src="img/Michelle_Cottle.jpg" alt="image of michelle cottle">
                 <p>Michelle Cottle</p>
                 <p>Will Congress Abandon America's Seniors?</p>
             </div>
             <div>
-                <!--IMAGE-->
+                <img src="img/Paul_Krugman.jpg" alt="Image of Paul Krugman">
                 <p>Paul Krugman</p>
                 <p>Can the Rich Pay for a Better America?</p>
             </div>
             <div>
-                <!--IMAGE-->
+                <img src="img/Thomas_Friedman.jpg">
                 <p>Thomas L. Friedman</p>
                 <p>Bibi is Trump and the Israeli Change Coalition is Biden</p>
             </div>
             <div>
-                <!--IMAGE-->
+                <img src="img/Emma_Goldberg.jpg"
                 <p>Emma Goldberg</p>
                 <p>She Had Been a Doctor for Six Days Before Her Patient Died</p>
             </div>
             <div>
-                <!--IMAGE-->
+                <img src="img/David_Brooks.jpg"
                 <p>David Brooks</p>
                 <p>You May Live a Lot Longer</p>
             </div>
             <div>
-                <!--IMAGE-->
+                <img src="img/Ezra_Klein.jpg"
                 <p>'Ezra Klein Show'</p>
                 <p>Is A.I. the Problem? Or Are We?</p>
             </div>
         </aside>
-        <aside class = "editors picks">
+
+        <aside class = "editors_picks">
             <h4>Editor's Picks</h4>
             <div>
-                <!--IMAGE-->
+                <img src="img/van_Gogh_last_days.jpg">
                 <h3>The Hunt for Clarity About van Gogh's Last Days Leads to Maine</h3>
                 <p>Experts are examining a watercolor found in an antiques shop that may be a rare work by Edmund Walpole Brooke, who painted with van Gogh</p>
             </div>
             <div>
-                <!--IMAGE-->
+                <img src="img/Modern_love.jpg">
                 <p>Modern love: Oh, Dewey, Where Would You Put Me?</p>
             </div>
             <div>
-                <!--IMAGE-->
+                <img src="img/Big_New_York_city.jpg"
                 <p>Big City: New York City Can't Just Gentrify Its Way Back to Normal</p>
             </div>
         </aside>
-        <article>
-            <section class = "section0" id = "developing">
-                <h4>DEVELOPING</h4>
-                <div>
-                    <h4>U.S. Employers Added 559,000 Jobs in May</h4>
-                    <ul class = "body-list">
-                        <li>Hiring accelerated, with the government reporting that employers added about twice the previous month's gains. The unemployment rate fell to 5.8 percent.</li>
-                        <li>As coronavirus infections ebb, vaccinations spread and businesses reopen, the economy has started to regain its footing. Here's the latest in business.</li>
-                    </ul>
-                </div>
-            </section>
-            <section class = "section1" id = "live">
-                <h4>LIVE</h4>
-                <div>
-                    <h4>Third Covid Wave Feared in Africa as Vaccinations Falter</h4>
-                    <p>Immunization drives on the continent have been crippled by a lack of funding and doses. Here's the latest on the pandemic.</p>
-                </div>
-            </section>
-            <section class = "section2" id = "extra">
-                <div>
-                    <h3>U.S. Finds No Evidence of Alien Spacecraft but Can't Rule It Out</h3>
-                    <p>A new report concedes that much about the aerial phenomena observed by Navy pilots in recent years remains difficult to explain.</p>
-                </div>
-                <!--TO BE DONE:::: THE CONTENT TO THE RIGHT-->
-            </section>
-        </article>
+<!-- End of Aside section -->
+
+
+<hr>
+
+        
+        <!-- Start of Footer -->
         <footer>
             <h2>The VanGuardian</h2>
+            <h3>SUBSCRIBE</h3>
+            <ul>
+                <li id="ul_home">Home Delivery</li> 
+                <li id="ul_digital">Digital Subscription</li>
+                <li id="ul_games">Games</li>
+                <li id="ul_cooking">Cooking</li>
+            </ul>
+
+            <nav 4>
+                <ul>
+                    <li>Company</li>
+                    <li>Contact Us</li>
+                    <li>Accesibility</li>
+                    <li>Work with us</li>
+                    <li>Advertise</li>
+                    <li>Privacy Policy</li>
+                    <li>Terms of Service</li>
+                    <li>Terms of Sale</li>
+                    <li>Site Map</li>
+                    <li>Subscriptions</li>
+                </ul 4>
+            </nav>
+            <h3 id="copyright">© 2021 - The VanGuardian</h3>
         </footer>
     </body>
 </html>
