@@ -1,0 +1,81 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+/* Navbar */
+nav {
+    background-color: #fff;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    float: left;
+    z-index: 9;
+}
+
+/* Big image with Gin */
+section.main {
+    background-image: url(img/gin_glass_cropped.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 2000px;
+    height: 960px;
+    left: -2px;
+    top: 94px;  
+}
+
+/* Find your perfect Gin */
+section h1 {
+    width: 2000px;
+    height: 334px;
+    left: 80px;
+    position: absolute;
+    font-size: 1000%;
+    font-weight: 400;
+    line-height: 87%;
+    letter-spacing: 0.035em;
+    text-align: left;
+}
+
+/* Navbar items */
+nav li {
+    list-style: none;
+    display: inline;
+    font-size: 200%;
+    margin-left: 30px;
+}
+
+/* Navbar buttons */
+nav button {
+    text-align: center;
+    position: relative;
+    width: 150px;
+    height: 46px;
+    left: 1336px;
+    bottom: 50%;
+    /* float: right; */
+    margin-left: 30px;
+    font-size: 150%;
+    border-radius: 5px;
+}
+
+/* Sign In */
+nav button.green {
+    background-color: green;
+    color: white;
+    border-color: white;
+}
+
+/* Sign Up */
+nav button.white {
+    background-color: white;
+    color: green;
+    border-color: green;
+}
+
+.best_sellers {
+    height: 500px;
+    padding-bottom: 1000px;
+}
+
+
