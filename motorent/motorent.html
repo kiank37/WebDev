@@ -39,6 +39,9 @@
             } else if (email.indexOf("@") == 0) {
                 alert("@ may not be the first character of the email");
                 document.getElementById('email').focus();
+            } else if (email.indexOf(".net") == -1 && email.indexOf(".com") == -1 && email.indexOf(".org") == -1) {
+                alert("Your email must contain .net, .com, or .org");
+                document.getElementById('email').focus();
             }
         }
 
@@ -52,23 +55,26 @@
             }
         }
 
-        function check_phone() {
-            xprefix = document.getElementById('prefix').value;
-            xphone = document.getElementById('phone').value;
+        function insurance_fulltank() {
+            insure = 0;
+            fulltank = 0
+            insure = parseInt(document.getElementById('insurance').value);
+            fulltank = parseInt(document.getElementById('fulltank').value);
+            if (insure == 1 && fulltank != 1) {
+                alert("Choosing insurance requires choosing fulltank as well");
+            }
+        }
 
-            if (xprefix == 34) {
-                if (xphone.indexOf("6") != 0) {
-                    alert("Spanish phones must start with a 6");
-                }
+        function yamaha_insure() {
+            brand = document.getElementById('brand').value;
+            insurance = document.getElementById('insurance').value;
+            if (brand.indexOf("Yamaha") != -1 && insurance != 1) {
+                alert('Choosing Yamaha requires choosing insurance');
             }
         }
 
         function check_terms() {
-            if (document.getElementById('terms').checked == false) {
-                alert("you must accept T&C");
-            } else {
-                alert("Form sent");
-            }
+            alert("Form sent");
         }
 
     </script>
@@ -205,25 +211,26 @@
                 </td>
             </tr>
             <tr>
-                <td class="style2">Gender:</td>
+                <td class="style2">Cylinder capacity:</td>
                 <td>
-                    <input checked="checked" name="gender" type="radio" value="M" /> Male <input name="gender" type="radio" value="F" /> Female
+                    <input checked="checked" name="cc" type="radio" value="50cc" /> 50cc <input name="cc" type="radio" value="250cc" /> 250cc <input name="cc" type="radio" value="500cc" /> 500cc
                 </td>
             </tr>
             <tr>
-                <td class="style2" style="width: 226px;">Phone Number:</td>
+                <td class="style2" style="width: 226px;">Brand:</td>
                 <td>
-                    <select name="prefix" style="width: 132px;" id="prefix">
-              <option value="33" selected="selected">+33</option>
-              <option value="34">+34</option>
-              <option value="44">+44</option> </select
-            ><input name="phone" style="width: 198px;" type="text" id="phone"  onchange = "check_phone()"/>
-          </td>
-        </tr>
+                    <select name="brand" style="width: 132px;" id="brand" required onchange = yamaha_insure()>
+              <option value="Yamaha"selected="selected">Yamaha</option>
+              <option value="Kawasaki">Kawasaki</option>
+              <option value="BMW">BMW</option>
+
+             </select>
+            </tr>
         <tr>
-          <td class="style2" style="width: 226px;">Terms&amp;Cond:</td>
+          <td class="style2" style="width: 226px;">Options:</td>
           <td>
-            <input name="terms" type="checkbox" id="terms" value="1" />
+            Insurance: <input name="terms" type="checkbox" id="insurance" value="1" required onchange = "insurance_fulltank()"/>
+            Full Tank: <input name="terms" type="checkbox" id="fulltank" value="1"/>
           </td>
         </tr>
         <tr>
